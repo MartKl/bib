@@ -1,0 +1,38 @@
+#Mac
+
+.DS_Store
+
+
+# LaTeX
+
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.vrb
+*.snm
+*.nav
+
+# latexmk
+
+*.fdb_latexmk
+*.fls
+
+
+# BibTeX
+
+*.bbl
+*.blg
+*Notes.bib
+
+
+# Compiled PDFs
+#
+# Note: PDFs for figures will be ignored *unless* they are in a subdirectory!
+
+*.pdf
+
+
+*.backup
+/old
