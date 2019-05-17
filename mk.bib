@@ -3,6 +3,46 @@
 % ------- version: merged_2019-02 + additions + few updates (including 'months as numbers')
 % added to git repo: 2019-03-21
 
+@ARTICLE{CorGamCho13,
+       author = {{C{\'o}rcoles}, A.~D. and {Gambetta}, Jay M. and {Chow}, Jerry M. and
+         {Smolin}, John A. and {Ware}, Matthew and {Strand}, Joel and
+         {Plourde}, B.~L.~T. and {Steffen}, M.},
+        title = {Process verification of two-qubit quantum gates by randomized benchmarking},
+      journal = {Phys. Rev. A},
+     keywords = {03.67.Ac, 03.67.Lx, 42.50.Pq, 85.25.-j, Quantum algorithms protocols and simulations, Quantum computation, Cavity quantum electrodynamics, micromasers, Superconducting devices, Quantum Physics, Condensed Matter - Mesoscale and Nanoscale Physics},
+         year = "2013",
+        month = {03},
+       volume = {87},
+       number = {3},
+          eid = {030301},
+        pages = {030301},
+          doi = {10.1103/PhysRevA.87.030301},
+archivePrefix = {arXiv},
+       eprint = {1210.7011},
+ primaryClass = {quant-ph},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2013PhRvA..87c0301C},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
+@article{WalBarEme,
+  doi = {10.1088/1367-2630/18/4/043021},
+  year = 2016,
+  month = {apr},
+  publisher = {{IOP} Publishing},
+  volume = {18},
+  number = {4},
+  pages = {043021},
+  author = {Wallman, Joel J and Barnhill, Marie and Emerson, Joseph},
+  title = {Robust characterization of leakage errors},
+  journal = {New J. Phys.},
+  abstract = {Leakage errors arise when the quantum state leaks out of some subspace of interest, for example, the two-level subspace of a multi-level system defining a computational ‘qubit’, the logical code space of a quantum error-correcting code, or a decoherence-free subspace. Leakage errors pose a distinct challenge to quantum control relative to the more well-studied decoherence errors and can be a limiting factor to achieving fault-tolerant quantum computation. Here we present a scalable and robust randomized benchmarking protocol for quickly estimating the leakage rate due to an arbitrary Markovian noise process on a larger system. We illustrate the reliability of the protocol through numerical simulations.},
+  archivePrefix = {arXiv},
+       eprint = {1412.4126},
+ primaryClass = {quant-ph},
+}
+
 
 @ARTICLE{MonWol14,
        author = {{Montanaro}, Ashley and {de Wolf}, Ronald},
@@ -2718,8 +2758,6 @@ archivePrefix = "arXiv",
 @article{EmeAliZyc05,
 	Abstract = {We describe a scalable stochastic method for the experimental measurement of generalized fidelities characterizing the accuracy of the implementation of a coherent quantum transformation. The method is based on the motion reversal of random unitary operators. In the simplest case our method enables direct estimation of the average gate fidelity. The more general fidelities are characterized by a universal exponential rate of fidelity loss. In all cases the measurable fidelity decrease is directly related to the strength of the noise affecting the implementation, quantified by the trace of the superoperator describing the non-unitary dynamics. While the scalability of our stochastic protocol makes it most relevant in large Hilbert spaces (when quantum process tomography is infeasible), our method should be immediately useful for evaluating the degree of control that is achievable in any prototype quantum processing device. By varying over different experimental arrangements and error-correction strategies, additional information about the noise can be determined.},
 	Author = {Emerson, Joseph and Alicki, Robert and \.{Z}yczkowski, Karol},
-	Date-Added = {2011-04-14 23:11:52 -0700},
-	Date-Modified = {2015-09-14 23:28:54 +0000},
 	Doi = {10.1088/1464-4266/7/10/021},
 	Eprint = {arXiv:quant-ph/0503243},
 	Journal = {J. Opt. B},
@@ -2728,7 +2766,7 @@ archivePrefix = "arXiv",
 	Title = {Scalable noise estimation with random unitary operators},
 	Volume = {7},
 	Year = {2005},
-	Bdsk-Url-1 = {http://dx.doi.org/10.1088/1464-4266/7/10/021}}
+	}
 @article{DelGoeSei77,
 	year={1977},
 	issn={0046-5755},
@@ -6163,8 +6201,8 @@ month = 06,
 year = {2016},
 url = {http://mateusaraujo.info/2016/08/02/understanding-bells-theorem-part-3-the-many-worlds-version/}
 }
-@article{EmersonEtAl:2007,
-	title = {Symmetrized {Characterization} of {Noisy} {Quantum} {Processes}},
+@article{EmeSilMou07,
+	title = {Symmetrized Characterization of Noisy Quantum Processes},
 	volume = {317},
 	issn = {0036-8075, 1095-9203},
 	url = {http://www.sciencemag.org/cgi/doi/10.1126/science.1145699},
@@ -6177,19 +6215,27 @@ url = {http://mateusaraujo.info/2016/08/02/understanding-bells-theorem-part-3-th
 	year = {2007},
 	pages = {1893--1896}
 }
-@article{LeviEtAl:2007,
-	title = {Efficient error characterization in quantum information processing},
-	volume = {75},
-	url = {https://link.aps.org/doi/10.1103/PhysRevA.75.022314},
-	doi = {10.1103/PhysRevA.75.022314},
-	number = {2},
-	urldate = {2018-07-13},
-	journal = {Phys. Rev. A},
-	author = {Lévi, Benjamin and López, Cecilia C. and Emerson, Joseph and Cory, D. G.},
-	month = 02,
-	year = {2007},
-	pages = {022314},
+
+@ARTICLE{LevLopEme07,
+       author = {{L{\'e}vi}, Benjamin and {L{\'o}pez}, Cecilia C. and {Emerson}, Joseph and
+         {Cory}, D.~G.},
+        title = {Efficient error characterization in quantum information processing},
+      journal = {Phys.\ Rev.\ A},
+     keywords = {03.67.Lx, 03.65.Yz, 03.67.Pp, Quantum computation, Decoherence, open systems, quantum statistical methods, Quantum error correction and other methods for protection against decoherence, Quantum Physics},
+         year = "2007",
+        month = {02},
+       volume = {75},
+       number = {2},
+          eid = {022314},
+        pages = {022314},
+          doi = {10.1103/PhysRevA.75.022314},
+archivePrefix = {arXiv},
+       eprint = {quant-ph/0608246},
+ primaryClass = {quant-ph},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2007PhRvA..75b2314L},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
+
 @article{HashagenEtAl:2018,
 	title = {Real {R}andomized {B}enchmarking},
 	author = {Hashagen, A. K. and Flammia, S. T. and Gross, D. and Wallman, J. J.},
@@ -6232,19 +6278,48 @@ url = {http://mateusaraujo.info/2016/08/02/understanding-bells-theorem-part-3-th
 	month = {09},
 	year = {2014},
 }
-@article{Carignan-dugasEtAl:2015,
-	title = {Characterizing universal gate sets via dihedral benchmarking},
-	volume = {92},
-	url = {https://link.aps.org/doi/10.1103/PhysRevA.92.060302},
-	doi = {10.1103/PhysRevA.92.060302},
-	number = {6},
-	urldate = {2018-07-13},
-	journal = {Phys. Rev. A},
-	author = {Carignan-Dugas, Arnaud and Wallman, Joel J. and Emerson, Joseph},
-	month = 12,
-	year = {2015},
-	pages = {060302}
+
+@ARTICLE{CroMagBis16,
+       author = {{Cross}, Andrew W. and {Magesan}, Easwar and {Bishop}, Lev S. and
+         {Smolin}, John A. and {Gambetta}, Jay M.},
+        title = {Scalable randomised benchmarking of non-Clifford gates},
+      journal = {npj Quant. Inf.},
+     keywords = {Quantum Physics},
+         year = "2016",
+        month = {04},
+       volume = {2},
+          eid = {16012},
+        pages = {16012},
+          doi = {10.1038/npjqi.2016.12},
+archivePrefix = {arXiv},
+       eprint = {1510.02720},
+ primaryClass = {quant-ph},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2016npjQI...216012C},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
+
+
+
+@ARTICLE{CarWalEme16,
+       author = {{Carignan-Dugas}, Arnaud and {Wallman}, Joel J. and {Emerson}, Joseph},
+        title = {Characterizing universal gate sets via dihedral benchmarking},
+      journal = {Phys. Rev. A},
+     keywords = {03.67.Lx, 03.65.Fd, 03.65.Yz, 03.67.Ac, Quantum computation, Algebraic methods, Decoherence, open systems, quantum statistical methods, Quantum algorithms protocols and simulations, Quantum Physics},
+         year = "2015",
+        month = {12},
+       volume = {92},
+       number = {6},
+          eid = {060302},
+        pages = {060302},
+          doi = {10.1103/PhysRevA.92.060302},
+archivePrefix = {arXiv},
+       eprint = {1508.06312},
+ primaryClass = {quant-ph},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2015PhRvA..92f0302C},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
 @article{AmbainisEtAl:2009,
 author = {Andris Ambainis and Jan Bouda and Andreas Winter},
 title = {Nonmalleable encryption of quantum information},
@@ -6483,6 +6558,30 @@ pages={307-326}
 	month = 08,
 	publisher = {American Physical Society},
 }
+@ARTICLE{MagGamJoh12,
+       author = {{Magesan}, Easwar and {Gambetta}, Jay M. and {Johnson}, B.~R. and
+         {Ryan}, Colm A. and {Chow}, Jerry M. and {Merkel}, Seth T. and
+         {da Silva}, Marcus P. and {Keefe}, George A. and {Rothwell}, Mary B. and
+         {Ohki}, Thomas A. and {Ketchen}, Mark B. and {Steffen}, M.},
+        title = {Efficient Measurement of Quantum Gate Error by Interleaved Randomized Benchmarking},
+      journal = {Phys. Rev. Lett.},
+     keywords = {03.67.Pp, 03.65.Wj, 03.67.Lx, Quantum error correction and other methods for protection against decoherence, State reconstruction quantum tomography, Quantum computation, Quantum Physics},
+         year = "2012",
+        month = {08},
+       volume = {109},
+       number = {8},
+          eid = {080505},
+        pages = {080505},
+          doi = {10.1103/PhysRevLett.109.080505},
+archivePrefix = {arXiv},
+       eprint = {1203.4550},
+ primaryClass = {quant-ph},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2012PhRvL.109h0505M},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
 @article{Sanders2015,
 	Archiveprefix = {arXiv},
 	Author = {Sanders, Yuval R. and Wallman, Joel J. and Sanders, Barry C.},
@@ -6630,7 +6729,7 @@ pages={307-326}
 	Volume = {2013},
 	Year = {2013},
 	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QVC4uLy4uL1BhcGVycy9TaW1wbGVyIHNlbWlkZWZpbml0ZSBwcm9ncmFtcyBmb3IgY29tcGxldGVseSBib3VuZGVkOyBXYXRyb3VzOyAyMDEzLnBkZtIXCxgZV05TLmRhdGFPEQI8AAAAAAI8AAIAAAdFdXJla2EhAAAAAAAAAAAAAAAAAAAAAAAAAADQnSBtSCsAAAAcw4sfU2ltcGxlciBzZW1pZGVmaW5pdGUjQ0M3Qjg1LnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMx7hdFOSUIAAAAAAAAAAAACAAIAAAkgAAAAAAAAAAAAAAAAAAAABlBhcGVycwAQAAgAANCdgt0AAAARAAgAANFOnaIAAAABABAAHMOLABx0owAcCBAAHAf8AAIASUV1cmVrYSE6VXNlcnM6AHNmbGFtbWlhOgBEcm9wYm94OgBQYXBlcnM6AFNpbXBsZXIgc2VtaWRlZmluaXRlI0NDN0I4NS5wZGYAAA4AkABHAFMAaQBtAHAAbABlAHIAIABzAGUAbQBpAGQAZQBmAGkAbgBpAHQAZQAgAHAAcgBvAGcAcgBhAG0AcwAgAGYAbwByACAAYwBvAG0AcABsAGUAdABlAGwAeQAgAGIAbwB1AG4AZABlAGQAOwAgAFcAYQB0AHIAbwB1AHMAOwAgADIAMAAxADMALgBwAGQAZgAPABAABwBFAHUAcgBlAGsAYQAhABIAZVVzZXJzL3NmbGFtbWlhL0Ryb3Bib3gvUGFwZXJzL1NpbXBsZXIgc2VtaWRlZmluaXRlIHByb2dyYW1zIGZvciBjb21wbGV0ZWx5IGJvdW5kZWQ7IFdhdHJvdXM7IDIwMTMucGRmAAATAAEvAAAVAAIAD///AACABtIbHB0eWiRjbGFzc25hbWVYJGNsYXNzZXNdTlNNdXRhYmxlRGF0YaMdHyBWTlNEYXRhWE5TT2JqZWN00hscIiNcTlNEaWN0aW9uYXJ5oiIgXxAPTlNLZXllZEFyY2hpdmVy0SYnVHJvb3SAAQAIABEAGgAjAC0AMgA3AEAARgBNAFUAYABnAGoAbABuAHEAcwB1AHcAhACOAOUA6gDyAzIDNAM5A0QDTQNbA18DZgNvA3QDgQOEA5YDmQOeAAAAAAAAAgEAAAAAAAAAKAAAAAAAAAAAAAAAAAAAA6A=}}
-@article{Wallman2015a,
+@article{WalBarEme15,
 	Archiveprefix = {arXiv},
 	Author = {Wallman, Joel J. and Barnhill, Marie and Emerson, Joseph},
 	Date-Added = {2015-09-06 02:57:41 +0000},
@@ -6645,8 +6744,8 @@ pages={307-326}
 	Title = {Robust Characterization of Loss Rates},
 	Volume = {115},
 	Year = {2015},
-	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QWC4uLy4uL1BhcGVycy9Sb2J1c3QgQ2hhcmFjdGVyaXphdGlvbiBvZiBMb3NzIFJhdGVzOyBXYWxsbWFuLCBCYXJuaGlsbCwgRW1lcnNvbjsgMjAxNS5wZGbSFwsYGVdOUy5kYXRhTxECSAAAAAACSAACAAAHRXVyZWthIQAAAAAAAAAAAAAAAAAAAAAAAAAA0J0gbUgrAAAAHMOLH1JvYnVzdCBDaGFyYWN0ZXJpemEjMUEwMDI0OS5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGgAknSEQfSAAAAAAAAAAAAAgACAAAJIAAAAAAAAAAAAAAAAAAAAAZQYXBlcnMAEAAIAADQnYLdAAAAEQAIAADSEVwyAAAAAQAQABzDiwAcdKMAHAgQABwH/AACAElFdXJla2EhOlVzZXJzOgBzZmxhbW1pYToARHJvcGJveDoAUGFwZXJzOgBSb2J1c3QgQ2hhcmFjdGVyaXphIzFBMDAyNDkucGRmAAAOAJgASwBSAG8AYgB1AHMAdAAgAEMAaABhAHIAYQBjAHQAZQByAGkAegBhAHQAaQBvAG4AIABvAGYAIABMAG8AcwBzACAAUgBhAHQAZQBzADsAIABXAGEAbABsAG0AYQBuACwAIABCAGEAcgBuAGgAaQBsAGwALAAgAEUAbQBlAHIAcwBvAG4AOwAgADIAMAAxADUALgBwAGQAZgAPABAABwBFAHUAcgBlAGsAYQAhABIAaVVzZXJzL3NmbGFtbWlhL0Ryb3Bib3gvUGFwZXJzL1JvYnVzdCBDaGFyYWN0ZXJpemF0aW9uIG9mIExvc3MgUmF0ZXM7IFdhbGxtYW4sIEJhcm5oaWxsLCBFbWVyc29uOyAyMDE1LnBkZgAAEwABLwAAFQACAA///wAAgAbSGxwdHlokY2xhc3NuYW1lWCRjbGFzc2VzXU5TTXV0YWJsZURhdGGjHR8gVk5TRGF0YVhOU09iamVjdNIbHCIjXE5TRGljdGlvbmFyeaIiIF8QD05TS2V5ZWRBcmNoaXZlctEmJ1Ryb290gAEACAARABoAIwAtADIANwBAAEYATQBVAGAAZwBqAGwAbgBxAHMAdQB3AIQAjgDpAO4A9gNCA0QDSQNUA10DawNvA3YDfwOEA5EDlAOmA6kDrgAAAAAAAAIBAAAAAAAAACgAAAAAAAAAAAAAAAAAAAOw},
-	Bdsk-Url-1 = {http://dx.doi.org/10.1103/PhysRevLett.115.060501}}
+}
+
 @article{Epstein2014,
 	Archiveprefix = {arXiv},
 	Author = {Epstein, Jeffrey M. and W. Cross, Andrew and Magesan, Easwar and Gambetta, Jay M.},
@@ -46102,15 +46201,28 @@ archivePrefix = "arXiv",
 	pages=166,
 	volume=2015
 	}
-	
-@article{Benchmarking,
-	title={Randomized benchmarking of quantum gates},
-	author={E. Knill  and D. Leibfried and R. Reichle and J. Britton and R. B. Blakestad and J. D. Jost and C. Langer and R. Ozeri and S. Seidelin and D. J. Wineland},	
-	journal={Phys. Rev. A},
-	volume=77,
-	pages=12307,
-	year=2008
-	}
+
+@ARTICLE{KniLeiRei08,
+       author = {{Knill}, E. and {Leibfried}, D. and {Reichle}, R. and {Britton}, J. and
+         {Blakestad}, R.~B. and {Jost}, J.~D. and {Langer}, C. and {Ozeri}, R. and
+         {Seidelin}, S. and {Wineland}, D.~J.},
+        title = {Randomized benchmarking of quantum gates},
+      journal = {Phys. Rev. A},
+     keywords = {03.67.Lx, 03.67.Pp, 37.10.De, 37.10.Gh, Quantum computation, Quantum error correction and other methods for protection against decoherence, Atom cooling methods, Atom traps and guides, Quantum Physics},
+         year = "2008",
+        month = {01},
+       volume = {77},
+       number = {1},
+          eid = {012307},
+        pages = {012307},
+          doi = {10.1103/PhysRevA.77.012307},
+archivePrefix = {arXiv},
+       eprint = {0707.0963},
+ primaryClass = {quant-ph},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2008PhRvA..77a2307K},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
 			
 @article{BoutenHandel,
 	author={L. Bouten and R. van Handel}, 
