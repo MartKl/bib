@@ -2773,7 +2773,11 @@ FUNCTION {incollection}
   format.authors "author" output.check
   author format.key output
   new.block.comma 
-  article.title.produce
+  %article.title.produce
+  %%% new lines of code
+  format.title
+  output
+  new.block.comma
   crossref missing$
     {
       format.in.ed.booktitle
@@ -2879,16 +2883,16 @@ FUNCTION {misc}
   new.block.comma
   howpublished "howpublished" bibinfo.check output
   %format.date.output
-  %%% new lines of code
-  year empty$
-    {}
-    {format.date.output}
-  if$
-  %%% end: new lines of code
   new.block.comma
   new.sentence.comma
   format.note output
   format.eprint output
+   %%% new lines of code
+   year empty$
+   {}
+   {format.date.output}
+  if$
+  %%% end: new lines of code
   fin.entry
 }
 
