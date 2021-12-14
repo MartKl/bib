@@ -1310,7 +1310,7 @@ FUNCTION {archiv.prefix.base}
 
 FUNCTION {eprint.command}
 {
-  "\Eprint "
+  "\Eprint"
 }
 
 FUNCTION {format.eprint.controlled}
@@ -1331,7 +1331,7 @@ FUNCTION {format.eprint.controlled}
         archivePrefix duplicate$ empty$ { pop$ "" } { ":" * } if$ *
         swap$ *
         primaryClass  duplicate$ empty$ { pop$ "" } { " [" swap$ * "]" * } if$ *
-        "{" swap$ * "} " *
+        "{" swap$ * "}" *
       *
       eprint.command swap$ *
     }
