@@ -3037,7 +3037,7 @@ FUNCTION {unpublished}
   link.shut
   %% end new lines of code
   %article.title.produce
-  format.eprint output
+  format.eprint.controlled output
   format.date.output
   new.block.comma
   new.sentence.comma
