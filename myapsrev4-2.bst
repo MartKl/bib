@@ -2814,8 +2814,8 @@ FUNCTION {inbook}
   if$
   new.block.comma
   new.sentence.comma
-  format.note output
-  format.eprint output
+  format.note "note" output.check
+  format.eprint.controlled output
   fin.entry
 }
 
