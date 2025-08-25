@@ -1,0 +1,168 @@
+% !TEX root=./template.tex %%% ref to the main file
+
+% new thm environments
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma} % "[theorem]" makes the lemma environment to use the same counter as the theorem environment
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+
+
+%%%=====================================================
+%%%================  new commands  =======================
+%%%====================================================
+%%% ------ rm ---------
+\newcommand{\e}{\ensuremath\mathrm{e}} % Euler e
+\renewcommand{\i}{\ensuremath\mathrm{i}} % imaginary unit
+\DeclareMathOperator{\Tr}{Tr} % trace 
+\renewcommand{\Re}{\operatorname{Re}} % real part
+\renewcommand{\Im}{\operatorname{Im}} % imaginary part
+\DeclareMathOperator{\ran}{ran} % range
+\DeclareMathOperator{\rank}{rank} % rank 
+\DeclareMathOperator{\vecmap}{vec} % vectorization map
+\renewcommand{\L}{\operatorname{L}} % linear operators
+\DeclareMathOperator{\sign}{sign} % the sign map
+
+\DeclareMathOperator{\U}{U}%unitary group U(n) 
+\renewcommand{\O}{\operatorname{O}}%orthogonal group U(n)
+\DeclareMathOperator{\SU}{SU}%special unitary group SU(n)
+
+%%% ------ mathbb --------
+\newcommand{\CC}{\mathbb{C}}% complex numbers
+\newcommand{\RR}{\mathbb{R}}% reals
+\newcommand{\KK}{\mathbb{K}}% for \RR or \CC
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\1}{\mathds{1}} % identity operator
+\newcommand{\EE}{\mathbb{E}} % expectation value
+\newcommand{\PP}{\mathbb{P}} % Prob.
+
+%%% ------ mathcal ---------
+\newcommand{\mc}[1]{\mathcal{#1}}
+\renewcommand{\H}{\mc{H}} % Hilbert space 
+
+
+%%% ------ other ----------
+\newcommand{\argdot}{{\,\cdot\,}} % for a dot as an argument
+\renewcommand{\vec}[1]{\mathbf{#1}} % for vectors
+\newcommand{\ad}{\dagger} % $A^\ad$ is the adjoint of $A$
+
+\DeclareMathOperator{\LandauO}{\mathrm{O}} % Landau big-O notation
+\DeclareMathOperator{\LandauOmega}{\Omega}
+\DeclareMathOperator{\tLandauO}{\tilde{\mathrm{O}}}
+\DeclareMathOperator{\tLandauOmega}{\tilde{\Omega}}
+\DeclareMathOperator{\LandauTheta}{\Theta}
+\DeclareMathOperator{\tLandauTheta}{\tilde{\Theta}}
+
+
+%%% ------ norms, inner product ----------
+% requires: \usepackage{ifthen}
+\DeclarePairedDelimiterX{\abs}[1]{\lvert}{\rvert}{%
+  \ifblank{#1}{\,\cdot\,}{#1}
+}   % absolute value
+
+\DeclarePairedDelimiterX\norm[1]\lVert\rVert{%
+  \ifblank{#1}{\,\cdot\,}{#1}
+}   % norm
+
+
+\newcommand{\lpnorm}[2][p]{\norm{#2}_{\ell_{#1}}}   %Lp norm - standard size
+\newcommand{\lpnorma}[2][p]{\norm*{#2}_{\ell_{#1}}}   %Lp norm - automatic size
+\newcommand{\lpnormb}[2][p]{\norm[\big]{#2}_{\ell_{#1}}}
+\newcommand{\lpnormB}[2][p]{\norm[\Big]{#2}_{\ell_{#1}}}
+%
+\newcommand{\pnorma}[2][p]{\norm*{#2}_{#1}} %p norm - standard size
+\newcommand{\pnorm}[2][p]{\norm{#2}_{#1}} %p norm - automatic size
+\newcommand{\pnormb}[2][p]{\norm[\big]{#2}_{#1}}
+\newcommand{\pnormB}[2][p]{\norm[\Big]{#2}_{#1}}
+%
+\DeclarePairedDelimiterX{\iiiNorm}[1]{\lvert}{\rvert}{%
+  \delimsize\lvert\delimsize\lvert#1\delimsize\rvert\delimsize\rvert%
+}
+
+% \DeclarePairedDelimiterXPP{〈cmd〉}[〈num args〉]{〈pre code〉}{〈left_delim〉}{〈right_delim〉}{〈post code〉}{〈body〉}
+% interpreted as 
+% {〈pre code〉} {〈left_delim〉} {〈body〉} {〈right_delim〉} {〈post code〉}
+\DeclarePairedDelimiterXPP\snorm[1]{}\lVert\rVert{_\infty}{\ifblank{#1}{\,\cdot\,}{#1}}   %spectral norm  =  (2->2)-norm
+\newcommand{\snormb}[1]{\snorm[\big]{#1}}
+\newcommand{\snormB}[1]{\snorm[\Big]{#1}}
+%
+\DeclarePairedDelimiterXPP\twonorm[1]{}\lVert\rVert{_2}{\ifblank{#1}{\,\cdot\,}{#1}}   % 2-norm
+\newcommand{\twonormb}[1]{\twonorm[\big]{#1}}
+
+\DeclarePairedDelimiterXPP\trnorm[1]{}\lVert\rVert{_1}{\ifblank{#1}{\,\cdot\,}{#1}}   % trace norm
+\newcommand{\trnormb}[1]{\trnorm[\big]{#1}}
+
+\DeclarePairedDelimiterXPP\fnorm[1]{}\lVert\rVert{_{\fro}}{\ifblank{#1}{\,\cdot\,}{#1}}   % Fro-norm
+\newcommand{\fnormn}[1]{\fnorm*{#1}}
+\newcommand{\fnormb}[1]{\fnorm[\big]{#1}}
+
+\DeclarePairedDelimiterXPP\dnorm[1]{}\lVert\rVert{_\diamond}{\ifblank{#1}{\,\cdot\,}{#1}}   % diamond norm
+\newcommand{\dnormb}[1]{\dnorm[\big]{#1}}
+
+\DeclarePairedDelimiterXPP\cbnorm[1]{}\lVert\rVert{_\mathrm{cb}}{\ifblank{#1}{\,\cdot\,}{#1}}   % CB-norm
+\DeclarePairedDelimiterXPP\onenorm[1]{}\lVert\rVert{_{1\rightarrow 1}}{\ifblank{#1}{\,\cdot\,}{#1}}   % (1->1)-norm
+\DeclarePairedDelimiterXPP\ddnorm[1]{}\lVert\rVert{_{\diamond\rightarrow \diamond}}{\ifblank{#1}{\,\cdot\,}{#1}}   % (\diamond->\diamond)-norm
+\DeclarePairedDelimiterXPP\ssnorm[1]{}\lVert\rVert{_{\infty\rightarrow\infty}}{\ifblank{#1}{\,\cdot\,}{#1}}   % (\infty->\infty)-norm
+
+% set
+% just to make sure it exists
+\providecommand\given{}
+% can be useful to refer to this outside \Set
+\newcommand\SetSymbol[1][]{%
+  \nonscript\:#1\vert
+  \allowbreak
+  \nonscript\:
+  \mathopen{}}
+\DeclarePairedDelimiterX\Set[1]\{\}{%
+  \renewcommand\given{\SetSymbol[\delimsize]}
+  #1
+}
+
+%inner product
+\DeclarePairedDelimiterX\innerp[2]{\langle}{\rangle}{%
+  \ifblank{#1}{\,\cdot\,}{#1} , \ifblank{#2}{\,\cdot\,}{#2}%
+}
+
+% ket-bra-notation
+\DeclarePairedDelimiter{\bra}{\langle}{\vert}
+\DeclarePairedDelimiter{\ket}{\vert}{\rangle}
+\newcommand{\ketb}[1]{\ket[\big]{#1}}
+\newcommand{\brab}[1]{\bra[\big]{#1}}
+
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}%
+  {#1\kern0.15ex\delimsize\vert\kern0.15ex\mathopen{}#2}
+\newcommand{\braketb}[2]{\braket[\big]{#1}{#2}}
+\newcommand{\braketB}[2]{\braket[\Big]{#1}{#2}}
+
+\DeclarePairedDelimiterX\ketbra[2]{\vert}{\vert}%
+  {#1\kern0.15ex\delimsize\rangle\delimsize\langle\kern0.15ex\mathopen{}#2}
+
+\DeclarePairedDelimiterX\sandwich[3]{\langle}{\rangle}%
+  {#1\,\delimsize\vert\kern0.15ex\mathopen{}#2\kern0.15ex\delimsize\vert\kern0.15ex\mathopen{}#3}
+
+% ket-bra-notation with round deliminators
+\DeclarePairedDelimiter{\obra}{(}{\vert}
+\DeclarePairedDelimiter{\oket}{\vert}{)}
+
+\DeclarePairedDelimiterX\obraket[2]{(}{)}%
+  {#1\kern0.15ex\delimsize\vert\kern0.15ex\mathopen{}#2}
+
+\DeclarePairedDelimiterX\oketbra[2]{\vert}{\vert}%
+  {#1\kern0.15ex\delimsize)\delimsize(\kern0.15ex\mathopen{}#2}
+
+\DeclarePairedDelimiterX\osandwich[3]{(}{)}%
+  {#1\,\delimsize\vert\kern0.15ex\mathopen{}#2\kern0.15ex\delimsize\vert\kern0.15ex\mathopen{}#3}
+\newcommand{\osandwichb}[3]{\osandwich[\big]{#1}{#2}{#3}}
+
+% %------- smaller space in,e.g., $\exp\left(x\right)$ -> $\exp\paren{x}$
+\DeclarePairedDelimiter\paren{(}{)}
+
+% verbatim font
+\newcommand{\verbat}[1]{{\ttfamily #1}}
+% --------------- this project -----------------
+
+
+% ... more ...
+

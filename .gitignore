@@ -36,3 +36,4 @@
 
 *.backup
 /old
+/*.bak
